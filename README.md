@@ -5,7 +5,7 @@
 
 This project is hosted on the Heroku Cloud Platform.
 
-View the live project [here](https://ihr-battleship-1147d52d8a23.herokuapp.com/) or by copy & Pasting https://ihr-battleship-1147d52d8a23.herokuapp.com/ 
+View the live project [here](https://ihr-battleship-pp3-b46c9feefb74.herokuapp.com/) or by copy & Pasting https://ihr-battleship-pp3-b46c9feefb74.herokuapp.com/ 
 
 ![Game Screenshot](https://hasibullah.com/da/01.PNG)
 
