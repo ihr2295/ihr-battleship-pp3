@@ -1,31 +1,77 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# IHR BATTLESHIPS GAME
 
-Welcome USER_NAME,
+## Description
+**IHR Battleships Game** is a Python terminal-based game that lets users experience naval warfare. Command your fleet, strategically position ships, and engage in intense battles. Showcase your Python skills and enjoy immersive gameplay. Dive into the seas and conquer in Battleship!
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This project is hosted on the Heroku Cloud Platform.
 
-## Reminders
+View the live project [here](https://ihr-battleship-1147d52d8a23.herokuapp.com/) or by copy & Pasting https://ihr-battleship-1147d52d8a23.herokuapp.com/ 
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+![Game Screenshot](https://hasibullah.com/da/01.PNG)
 
-## Creating the Heroku app
+## How to Play
+IHR Battleships Game is based on the classic pen-and-paper game. You can read more about it on [Wikipedia](https://en.wikipedia.org/wiki/Battleship_(game)).
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+In this version, the player enters their name, and two boards are randomly generated:
+- The player can see where their ships are, indicated by an '@' sign, but cannot see where the computer's ships are.
+- Guesses are marked on the board with an 'X'. Hits are indicated by '*'.
+- The player and the computer then take turns to make guesses and try to sink each other's battleships.
+- The winner is the player who sinks all of the opponent's battleships first.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+#### Existing Features
+- Random board generation
+  - Ships are randomly placed on both the player and computer boards.
+  - The player cannot see where the computer's ships are.
+  
+![Random Board Generation](https://hasibullah.com/da/02.PNG)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- Play against the computer
+- Accepts user input
+- Maintains scores
 
-Connect your GitHub repository and deploy as normal.
+![Gameplay](https://hasibullah.com/da/03.PNG)
 
-## Constraints
+- Input validation and error-checking
+  - You cannot enter coordinates outside the size of the grid.
+  - You must enter numbers.
+  - You cannot enter the same guess twice.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+![Input Validation](https://hasibullah.com/da/04.PNG)
 
------
-Happy coding!
+## Data Model
+I decided to use the `Player` class as my model. The game creates two instances of the `Player` class to hold the player's and the computer's boards. The `player` class stores the board size, the number of ships, the position of ships, and the guesses against that board.
+
+## Testing
+I have manually tested this project by doing the following:
+- Passed the code through a PEP8 Linter and confirmed there are no problems.
+- Given invalid inputs: strings when numbers are expected, out-of-bound inputs, and the same input twice.
+- Tested in my local terminal and the Code Institute Heroku terminal.
+
+![Testing](https://hasibullah.com/da/05.PNG)
+
+### Bugs
+No bugs were found.
+
+### Remaining Bugs
+No bugs remain.
+
+#### Validator Testing
+- PEP8: No errors were returned from PEP8.
+
+## Deployment
+This project was deployed using the Heroku Cloud Platform.
+
+Steps for deployment:
+1. Fork or clone this repository.
+2. Create a new Heroku app.
+3. Set the buildbacks to Python and NodeJS in that order.
+4. Connect to GitHub using your username and password.
+5. Link the Heroku app to the repository.
+6. Click on deploy.
+
+## Credits
+- Code Institute
+- Wikipedia
+- Heroku for deployment
